@@ -32,6 +32,15 @@ This project is built using **p5.js**, and implements a custom `Wheel` class enc
 | `state` machine        | Controls life cycle stages: `0 = hidden`, `1 = active`, `2 = fading` |
 | `scale()` & `tint()`   | Enables shape deformation and visual fading over time |
 
+### ⚠️ External Techniques Not Taught in Class:
+- `tint(255, this.opacity)`: Used to apply dynamic transparency.  
+  → *// Not taught in class: `tint()` applies transparency to the full drawing context.*
+
+- `Array.from({ length: 7 }, () => randomColor())`: JS syntax for generating array of random colors.  
+  → *// JS array constructor: generates 7 random colors for the concentric rings.*
+
+This code was assisted using ChatGPT to support structural planning and code optimization.
+
 ---
 
 ## 📁 File Structure
@@ -44,12 +53,20 @@ tut1_groupA/
 
 ---
 
-## 🎓 Course Info
+
+## 🔄 Code Modifications from Group Version
+- Replaced static rendering with time-controlled state machine
+- Added `update()` method to the Wheel class with phase logic (`state = 0/1/2`)
+- Hover detection restores decaying wheels (`dist()` + mouse proximity)
+- Central animation logic entirely rewritten while preserving group visual style
+
+### 🎓 Course Info
 
 IDEA9103 – Creative Coding  
 The University of Sydney, 2025  
 **Student Name**: Shixuan Li  
 **SID**: 550224617
+**GitHub Repo**: [https://github.com/shli0386/tut1_wheelAnimation_shli0386](https://github.com/shli0386/tut1_wheelAnimation_shli0386)
 
 ---
 
