@@ -32,12 +32,10 @@ This project is built using **p5.js**, and implements a custom `Wheel` class enc
 | `state` machine        | Controls life cycle stages: `0 = hidden`, `1 = active`, `2 = fading` |
 | `scale()` & `tint()`   | Enables shape deformation and visual fading over time |
 
-### ⚠️ External Techniques Not Taught in Class:
-- `tint(255, this.opacity)`: Used to apply dynamic transparency.  
-  → *// Not taught in class: `tint()` applies transparency to the full drawing context.*
+### ⚠️ External Techniques (Not Taught in Class)
 
-- `Array.from({ length: 7 }, () => randomColor())`: JS syntax for generating array of random colors.  
-  → *// JS array constructor: generates 7 random colors for the concentric rings.*
+- `tint()` (p5.js): Used to apply opacity for wheel fading effects. Source: [p5.js Reference – tint()](https://p5js.org/reference/#/p5/tint)
+- `Array.from()` (JavaScript): Used to generate 7-color array in a single line. Source: [MDN Docs – Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 
 This code was assisted using ChatGPT to support structural planning and code optimization.
 
