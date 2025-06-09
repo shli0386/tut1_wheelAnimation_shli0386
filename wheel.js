@@ -24,6 +24,8 @@ class Wheel {
     this.shapeDeform = 1;
 
     // Color palette
+    // JS feature not taught in class: `Array.from()` creates an array of 7 random colors.
+    // Used to assign concentric circle colors in one line.
     this.colors = Array.from({ length: 7 }, () => randomColor());
     this.pinkRingColor = randomColor();
     this.yellowSpikesColor = randomColor();
@@ -90,7 +92,9 @@ class Wheel {
     translate(this.x, this.y);
     rotate(this.angle);
     angleMode(DEGREES);
-    tint(255, this.opacity); // Control overall transparency
+    // Not taught in class: `tint()` applies alpha transparency to everything drawn afterwards.
+    // Used here to control wheel fading effect.
+    tint(255, this.opacity);
     scale(this.shapeDeform, 1); // Horizontal deformation
 
     // Central concentric circles
